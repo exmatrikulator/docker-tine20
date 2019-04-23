@@ -1,14 +1,18 @@
+# Tine 2.0 Docker Image
+## Build 
 ```
 docker build -t tine20-server .
 ```
 
-## Docker-Compose
+use Docker Compose or Docker Swarm to deploy Tine 2.0.
+
+### Docker-Compose
 
 ```
 docker-compose up -d
 ```
 
-## Docker Swarm
+### Docker Swarm
 
 ```
 docker stack deploy tine20 -c docker-compose.yml
