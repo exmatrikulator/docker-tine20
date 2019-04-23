@@ -1,7 +1,7 @@
 version: '3'
 services:
   tine20:
-    image: tine20-server
+    image: exmatrikulator/tine20-server
     #build: .
     ports:
       - 80:80
