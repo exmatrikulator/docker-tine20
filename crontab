@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+* * * * *	www-data	/usr/bin/php /opt/tine20/tine20.php --method=Tinebase.triggerAsyncEvents | logger -p daemon.notice -t "Tine 2.0 scheduler"
