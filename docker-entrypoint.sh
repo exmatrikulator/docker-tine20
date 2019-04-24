@@ -43,7 +43,10 @@ if [ -z "$@" ]; then
 		sed -i "s/SETUP PASSWORD//" /etc/tine20/config.inc.php
 	fi
 	/usr/sbin/cron
-	/usr/sbin/apache2ctl -DFOREGROUND
+	touch /opt/tine20/tine20.log
+	chown www-data /opt/tine20/tine20.log /etc/tine20/config.inc.php
+	tail -f /opt/tine20/tine20.log &
+	/usr/sbin/apache2ctl -e info -DFOREGROUND
 fi
 
 exec "$@"
