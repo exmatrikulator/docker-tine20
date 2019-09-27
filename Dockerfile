@@ -36,19 +36,19 @@ unzip \
 
 RUN mkdir -p /opt/tine20 && \
   chown www-data:www-data /opt/tine20/ && \
-  curl http://packages.tine20.org/source/$TINE20_VERSION/tine20-allinone_$TINE20_VERSION.zip -o tine20.zip &&\
+  curl https://packages.tine20.org/source/$TINE20_VERSION/tine20-allinone_$TINE20_VERSION.zip -o tine20.zip &&\
   USER=www-data unzip tine20.zip -d /opt/tine20 &&\
   rm tine20.zip && \
-  curl http://packages.tine20.org/source/$TINE20_VERSION/tine20-voip_$TINE20_VERSION.zip -o voip.zip &&\
+  curl https://packages.tine20.org/source/$TINE20_VERSION/tine20-voip_$TINE20_VERSION.zip -o voip.zip &&\
   USER=www-data unzip voip.zip -d /opt/tine20 &&\
   rm voip.zip && \
-  curl http://packages.tine20.org/source/$TINE20_VERSION/tine20-humanresources_$TINE20_VERSION.zip -o humanresources.zip &&\
+  curl https://packages.tine20.org/source/$TINE20_VERSION/tine20-humanresources_$TINE20_VERSION.zip -o humanresources.zip &&\
   USER=www-data unzip humanresources.zip -d /opt/tine20 &&\
   rm humanresources.zip && \
-  curl http://packages.tine20.org/source/$TINE20_VERSION/tine20-projects_$TINE20_VERSION.zip -o projects.zip &&\
+  curl https://packages.tine20.org/source/$TINE20_VERSION/tine20-projects_$TINE20_VERSION.zip -o projects.zip &&\
   USER=www-data unzip projects.zip -d /opt/tine20 &&\
   rm projects.zip && \
-  curl http://packages.tine20.org/source/$TINE20_VERSION/tine20-simplefaq_$TINE20_VERSION.zip -o simplefaq.zip &&\
+  curl https://packages.tine20.org/source/$TINE20_VERSION/tine20-simplefaq_$TINE20_VERSION.zip -o simplefaq.zip &&\
   USER=www-data unzip simplefaq.zip -d /opt/tine20 &&\
   rm simplefaq.zip
 
